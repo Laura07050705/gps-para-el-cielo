@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GPS PARA EL CIELO</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f8fc;
+      color: #1f2937;
+    }
+
+    header {
+      background: #0b4f8a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .welcome {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px 10px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+    }
+
+    .card:hover {
+      background: #eef6ff;
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      color: #0b4f8a;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #6b7280;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      .menu {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>GPS PARA EL CIELO</h1>
+    <p>Busca • Ora • Visita • Ama • Alcanza</p>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h2>Bienvenido</h2>
+      <p>
+        Una herramienta para ayudarte a alcanzar personas,
+        orar por ellas y dar seguimiento a cada vida.
+      </p>
+    </section>
+
+    <section class="menu">
+
+      <div class="card">
+        <div class="icon">📍</div>
+        <h2>Mi Vecindario</h2>
+      </div>
+
+      <div class="card">
+        <div class="icon">🙏</div>
+        <h2>Lista de Oración</h2>
+      </div>
+
+      <div class="card">
+        <div class="icon">❤️</div>
+        <h2>Seguimiento</h2>
+      </div>
+
+      <div class="card">
+        <div class="icon">👤</div>
+        <h2>Mi Perfil</h2>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    GPS PARA EL CIELO
+  </footer>
+
+</body>
+</html>
