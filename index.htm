@@ -4,51 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GPS PARA EL CIELO</title>
-<style>
-  body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f8fc;
-  color: #1f2937;
-}
 
-header {
-  background: #0b4f8a;
-  color: white;
-  text-align: center;
-  padding: 30px 15px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f8fc;
+      color: #1f2937;
+    }
 
-header h1 {
-  margin: 0;
-  font-size: 30px;
-}
+    header {
+      background: #0b4f8a;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
 
-header p {
-  margin-top: 8px;
-  font-size: 16px;
-}
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #0b4f8a;
+      margin-top: 0;
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>GPS PARA EL CIELO</h1>
+  <header>
+    <h1>GPS PARA EL CIELO</h1>
+    <p>Busca • Ora • Visita • Ama • Alcanza</p>
+  </header>
 
-  <p>Busca • Ora • Visita • Ama • Alcanza</p>
+  <main>
+    <div class="card">
+      <h2>Mi Vecindario</h2>
+    </div>
 
-  <h2>Mi Vecindario</h2>
-  <h2>Lista de Oración</h2>
-  <h2>Seguimiento</h2>
-  <h2>Mi Perfil</h2>
-<script src= "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
-  <script>
-const SUPABASE_URL ="https://hcyoslkatnaydayguafi.supabase.co';
-  const SUPABASE_KEY = "sb_publishable_mBznQyfIpZNz8UP8p5xeQA_EM3I_us1";
-    
-  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-  
+    <div class="card">
+      <h2>Lista de Oración</h2>
+    </div>
+
+    <div class="card">
+      <h2>Seguimiento</h2>
+    </div>
+
+    <div class="card">
+      <h2>Mi Perfil</h2>
+    </div>
+  </main>
 
 </body>
-  
+</html>
