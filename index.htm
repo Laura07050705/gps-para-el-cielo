@@ -89,6 +89,19 @@
 function buscarDireccion() {
   const direccion = document.getElementById("direccion").value;
   document.getElementById("vecindario").innerHTML += "<p>Buscando vecinos cerca de: " + direccion + "</p>";
+  const url = "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(direccion);
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    if (data.length > 0) {
+      const lat = data[0].lat;
+      const lon = data[0].lon;
+      document.getElementById("vecindario").innerHTML += "<p>Ubicación encontrada: " + lat + ", " + lon + "</p>";
+} else {
+      document.getElementById("vecindario").innerHTML += "<p>No se encontró la dirección.</p>";
+}
+  });
+}
   }
 </script>
 </body>
