@@ -113,7 +113,17 @@ function agregarOracion() {
   const nombre = document.getElementById("nombre-oracion").value;
   if (nombre.trim() === "") return;
   const li = document.createElement("li");
-li.textContent = nombre;  
+li.textContent = nombre; 
+  const botonOre = document.createElement("button");
+  botonOre.textContent = "Oré";
+  botonOre.onclick = function() {
+    li.style.textDecoration = "line-through";
+    };
+  li.appendChild(botonOre);
+  document.getElementById("nombres-oracion").appendChild(li);
+  document.getElementById("nombre-oracion").value = "";
+  }
+  
   document.getElementById("nombres-oracion").appendChild(li);
   document.getElementById("nombre-oracion").value = "";
   }
