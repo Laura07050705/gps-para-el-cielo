@@ -97,6 +97,7 @@ function buscarDireccion() {
       const lat = data[0].lat;
       const lon = data[0].lon;
       document.getElementById("vecindario").innerHTML += "<p>Ubicación encontrada: " + lat + ", " + lon + "</p>";
+      document.getElementById("vecindario").innerHTML += '<p><a href="https://www.openstreetmap.org/?mlat=' + lat + '&mlon=' + lon + '#map=17/' + lat + '/' + lon + '" target="_blank">Ver ubicación en el mapa</a></p>';
 } else {
       document.getElementById("vecindario").innerHTML += "<p>No se encontró la dirección.</p>";
 }
