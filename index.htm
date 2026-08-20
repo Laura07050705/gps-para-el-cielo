@@ -115,8 +115,8 @@ function agregarOracion() {
   const li = document.createElement("li");
 li.textContent = nombre; 
   const botonOre = document.createElement("button");
-  botonOre.textContent = "Oré";
-  botonOre.onclick = function() {
+botonOre.textContent = "Oré";  
+  botonOre.onclick = () => {
     li.style.textDecoration = "line-through";
     };
   li.appendChild(botonOre);
