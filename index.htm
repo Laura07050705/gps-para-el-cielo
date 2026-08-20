@@ -61,6 +61,7 @@
   <main>
     <div class="card">
       <h2>Mi Vecindario</h2>
+      <button onclick="mostrarVecindario()">Abrir Vecindario</button>
     </div>
 
     <div class="card">
@@ -76,6 +77,9 @@
     </div>
   </main>
 <script>  
+ function mostrarVecindario() {
+   document.getElementById("vecindario").style.display = "block";
+   }
   console.log("GPS PARA EL CIELO listo");
 </body>
 </html>
