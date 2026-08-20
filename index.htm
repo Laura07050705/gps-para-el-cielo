@@ -71,6 +71,11 @@
 
     <div class="card">
       <h2>Lista de Oración</h2>
+      <div id="lista-oracion">
+        <h2>Lista de Oración</h2>
+        <input type="text" id="nombre-oracion" placeholder="Nombre o familia">
+        <button onclick="agregarOracion()">Agregar a oración</button>
+        <ul id="nombres-oracion"></ul>
     </div>
 
     <div class="card">
@@ -104,7 +109,14 @@ function buscarDireccion() {
 }
   });
 }
-  
+function agregarOracion() {  
+  const nombre = document.getElementById("nombre-oracion").value;
+  if (nombre.trim() === "") return;
+  const li = document.createElement("li");
+li.textContent = nombre;  
+  document.getElementById("nombres-oracion").appendChild(li);
+  document.getElementById("nombre-oracion").value = "";
+  }
 </script>
 </body>
 </html>
