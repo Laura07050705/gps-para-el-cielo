@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -110,7 +111,27 @@ function buscarDireccion() {
       document.getElementById("vecindario").innerHTML += "<p>No se encontró la dirección.</p>";
 }
   });
-}
+function buscarVecinos(lat, lon) {
+  const lista = document.getElementById("vecindario");
+  const lugares = [
+    [parseFloat(lat) + 0.001, parseFloat(lon)],
+    [parseFloat(lat) - 0.001, parseFloat(lon)],
+    [parseFloat(lat), parseFloat(lon) + 0.001],
+    [parseFloat(lat), parseFloat(lon) - 0.001]
+    ];
+  lugares.forEach((punto) => {
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${punto[0]}&lon=${punto[1]}`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.display_name) {
+        const li = document.createElement("li");
+        li.textContent = data.display_name;
+        lista.appendChild(li);
+        }
+      });
+    });
+  }
 function agregarOracion() {  
   const nombre = document.getElementById("nombre-oracion").value;
   if (nombre.trim() === "") return;
