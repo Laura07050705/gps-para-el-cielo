@@ -116,7 +116,7 @@ function buscarVecinos(lat, lon) {
   
   const lista = document.getElementById("vecindario");
 const fechaInicio = new Date("2026-08-21").getTime();
-  
+ const lugares = []; 
   for (let i = 1; i <= 16; i++) {
     lugares.push({ punto: [lat + i * 0.0005, lon + i * 0.0005] });
     }
