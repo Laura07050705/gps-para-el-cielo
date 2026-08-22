@@ -1,3 +1,59 @@
+Skip to content
+Laura07050705
+gps-para-el-cielo
+Repository navigation
+Code
+Issues
+Pull requests
+Agents
+Actions
+Projects
+Security and quality
+Insights
+Settings
+Commit 2ed2f78
+Laura07050705
+Laura07050705
+authored
+16 hours ago
+·
+·
+Verified
+Fix URL string formatting in index.htm
+main
+1 parent 
+eb31db1
+ commit 
+2ed2f78
+1 file changed
++1
+-1
+Lines changed: 1 addition & 1 deletion
+File tree
+
+index.htm
+
+ 
+‎index.htm‎
++1
+-1
+Lines changed: 1 addition & 1 deletion
+Original file line number	Diff line number	Diff line change
+@@ -121,7 +121,7 @@ <h2>Mi Perfil</h2>
+    [parseFloat(lat), parseFloat(lon) - 0.001]
+    ];
+  lugares.forEach((punto) => {
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${punto[0]}&lon=${punto[1]}`;
+    const url = https://nominatim.openstreetmap.org/reverse?format=json&lat=${punto[0]}&lon=${punto[1]}`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+0 commit comments
+Comments
+0
+ (0)
+Comment
+You're not receiving notifications from this thread.
 <!DOCTYPE html>
 <html lang="es">
 <head>
