@@ -113,13 +113,15 @@ function buscarDireccion() {
   });
 }
 function buscarVecinos(lat, lon) {
+  
   const lista = document.getElementById("vecindario");
-  const fechaInicio = new Date("2026-08-21").getTime();
+const fechaInicio = new Date("2026-08-21").getTime();
+  buscarVecinos(lat, lon);
   for (let i = 1; i <= 16; i++) {
     lugares.push({ punto: [lat + i * 0.0005, lon + i * 0.0005] });
     }
   const lugaresDelDia = obtenerVecinosDelDia(lugares, fechaInicio);
-  const lugares = [
+  
     [parseFloat(lat) + 0.001, parseFloat(lon)],
     [parseFloat(lat) - 0.001, parseFloat(lon)],
     [parseFloat(lat), parseFloat(lon) + 0.001],
